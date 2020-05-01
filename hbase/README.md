@@ -13,7 +13,7 @@ Created table italians
 root@abbaa06d1297:/tmp# hbase shell ./italians.txt
 
 ## Executando operações
-### 1. Adicione mais 2 italianos mantendo adicionando informações como data  de nascimento nas informações pessoais e um atributo de anos de  experiência nas informações profissionais;
+### 1. Adicione mais 2 italianos mantendo adicionando informações como data  de nascimento nas informações pessoais e um atributo de anos de  experiência nas informações profissionais;  
 put 'italians', '11', 'personal-data:name', 'Gean Carlini'
 put 'italians', '11', 'personal-data:born', '1970-01-01'
 put 'italians', '11', 'professional-data:years-exp', '20'
