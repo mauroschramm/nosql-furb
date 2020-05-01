@@ -25,26 +25,26 @@ put 'italians', '12', 'professional-data:years-exp', '40'
  alter 'italians', NAME => 'personal-data', VERSIONS => 5
  alter 'italians', NAME => 'professional-data', VERSIONS => 5
 
-### 3. Faça 5 alterações em um dos italianos;
- put 'italians', '12', 'personal-data:name', 'Marco Pollo'
- put 'italians', '12', 'personal-data:name', 'Marco Polo'
- put 'italians', '12', 'personal-data:born', '1254-06-01'
- put 'italians', '12', 'professional-data:years-exp', '45'
- put 'italians', '12', 'professional-data:years-exp', '44'
-
-### 4. Com o operador get, verifique como o HBase armazenou o histórico.
+### 3. Faça 5 alterações em um dos italianos;  
+ put 'italians', '12', 'personal-data:name', 'Marco Pollo'  
+ put 'italians', '12', 'personal-data:name', 'Marco Polo'  
+ put 'italians', '12', 'personal-data:born', '1254-06-01'  
+ put 'italians', '12', 'professional-data:years-exp', '45'  
+ put 'italians', '12', 'professional-data:years-exp', '44'  
+  
+### 4. Com o operador get, verifique como o HBase armazenou o histórico.  
  get 'italians', 12, {COLUMN => ['personal-data', 'professional-data'], VERSIONS => 5}  
-COLUMN                                                CELL
- personal-data:born                                   timestamp=1588194882741, value=1254-06-01
- personal-data:born                                   timestamp=1588193013534, value=1254-01-01
- personal-data:name                                   timestamp=1588194852159, value=Marco Polo
- personal-data:name                                   timestamp=1588194843236, value=Marco Pollo
- personal-data:name                                   timestamp=1588192938902, value=Marco Polo
- professional-data:years-exp                          timestamp=1588194955440, value=44
- professional-data:years-exp                          timestamp=1588194902204, value=45
- professional-data:years-exp                          timestamp=1588193028059, value=40
-1 row(s)
-Took 0.0450 seconds
+COLUMN                                                CELL  
+ personal-data:born                                   timestamp=1588194882741, value=1254-06-01  
+ personal-data:born                                   timestamp=1588193013534, value=1254-01-01  
+ personal-data:name                                   timestamp=1588194852159, value=Marco Polo  
+ personal-data:name                                   timestamp=1588194843236, value=Marco Pollo  
+ personal-data:name                                   timestamp=1588192938902, value=Marco Polo  
+ professional-data:years-exp                          timestamp=1588194955440, value=44  
+ professional-data:years-exp                          timestamp=1588194902204, value=45  
+ professional-data:years-exp                          timestamp=1588193028059, value=40  
+1 row(s)  
+Took 0.0450 seconds  
 
 ### 5. Utilize o scan para mostrar apenas o nome e profissão dos italianos.
  scan 'italians', {COLUMNS => ['personal-data:name', 'professional-data:role']}
