@@ -14,7 +14,7 @@ A implementação seguiu a especificação dos requisitos passadas no enunciado 
 Constam no repositório:
 
 1. um arquivo JAR gerado a partir da exportação do projeto do Eclipse.
-2. a estrutura do projeto "as is", como mantido pelo Eclipse.
+2. a estrutura do projeto "as is", como mantido pelo Eclipse (pasta RedisDemo).
 
 Uma vez conseguindo importar o projeto no Eclipse, basta executar diretamente a classe Redisngo.
 
