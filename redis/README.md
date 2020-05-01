@@ -18,9 +18,14 @@ Constam no repositório:
 
 Uma vez conseguindo importar o projeto no Eclipse, basta executar diretamente a classe Redisngo.
 
-Captura da tela de execução
+Captura da tela de uma execução:
 
 ![GitHub Logo](./capturaTelaRedisngo.JPG)
+  
+    
+Outra captura de tela de execução, mas desta vez o jogo teve 2 vencedores:
+
+![GitHub Logo](./capturaTelaRedisngo2.JPG)
 
 
 Ambiente utilizado:
