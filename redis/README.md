@@ -27,8 +27,10 @@ Ambiente utilizado:
 * JRE versão 1.8.0_251
 * Eclipse versão 2020-03 (4.15.0)
 * Redis versão 3.0.503
-* Redisson versão 3.12.5 (informada no arquivo *.pom*
+* Redisson versão 3.12.5 (informada no arquivo *.pom*)
 
+
+Programa fonte:
 ```java
 package br.furb.nosql.mauro;
 
