@@ -33,7 +33,7 @@ put 'italians', '12', 'professional-data:years-exp', '40'
  put 'italians', '12', 'professional-data:years-exp', '44'
 
 ### 4. Com o operador get, verifique como o HBase armazenou o histórico.
- get 'italians', 12, {COLUMN => ['personal-data', 'professional-data'], VERSIONS => 5}
+ get 'italians', 12, {COLUMN => ['personal-data', 'professional-data'], VERSIONS => 5}  
 COLUMN                                                CELL
  personal-data:born                                   timestamp=1588194882741, value=1254-06-01
  personal-data:born                                   timestamp=1588193013534, value=1254-01-01
