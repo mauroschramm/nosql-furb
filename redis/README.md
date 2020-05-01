@@ -69,8 +69,6 @@ public class Redisngo {
 	public Redisngo (RedissonClient clienteRedisson) {
 		this.redisson = clienteRedisson;
 	}
-
-
 	
 	/**
 	 * Cria no Redis um SET de Integers representando o globo do bingo, contendo as pedras que serão sorteadas no jogo
@@ -154,7 +152,6 @@ public class Redisngo {
 		}
 	}
 	
-
 	/**
 	 * Cria no Redis vários Longs para representar o escore de cada jogador
 	 */
@@ -275,7 +272,7 @@ public class Redisngo {
 		System.out.println("Preparando o jogo...");
 		
 		// conexão ao Redis (single serever)
-      System.out.print("Conectando ao Redis...");
+      		System.out.print("Conectando ao Redis...");
 		Config config = new Config();
 		config.useSingleServer().setAddress(URL_REDIS);
 		RedissonClient clienteRedisson = Redisson.create(config);
@@ -304,12 +301,12 @@ public class Redisngo {
 		bingo.criaEscores();
 		System.out.println("ok");
 		
-      // rodar o jogo
+      		// rodar o jogo
 		System.out.print("Jogando...");
 		bingo.jogar();
 		System.out.println("ok");
 		
-      // mostrar o resultado
+      		// mostrar o resultado
 		bingo.mostrarVencedores();
 
 		System.out.print("\nObrigado por participar do Redisngo!");
