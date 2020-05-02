@@ -8,6 +8,7 @@ A implementação seguiu a especificação dos requisitos passadas no enunciado 
 1. O jogo permite mais de um vencedor, desde que eles atinjam o escore pré-determinado para alcançar o bingo (15) na mesma jogada.
 1. A geração das cartelas se dá à partir de subconjuntos aleatórios do conjunto de "pedras" do jogo (gerado previamente).
    1. o método *random(int n)* da classe *org.redisson.api.RSet* permite extrair um subconjunto aleatório com *n* itens do conjunto.  
+1. o método *incrementAndGet()*  de *org.redisson.api.RAtomicLong* é utilizado para fazer o incremento atômico dos escores.
 1. As pedras sorteadas no jogo, bem como a lista dos vencedores, também são armazenadas em estruturas do Redis e posteriormente exibidas como as informações sobre a apuração do(s) vencedor(es).
 
 
